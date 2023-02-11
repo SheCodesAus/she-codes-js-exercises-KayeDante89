@@ -29,6 +29,15 @@ function createNewTaskElement(task, index) {
     toggleComplete(index);
   };
   newTodoTaskElement.appendChild(completeButtonElement);
+
+  let deleteButtonElement = document.createElement("input");
+  deleteButtonElement.type = "button";
+  deleteButtonElement.value = "Delete";
+  deleteButtonElement.onclick = function () {
+    deleteTask();
+  };
+  newTodoTaskElement.appendChild(deleteButtonElement);
+
   return newTodoTaskElement;
 }
 
